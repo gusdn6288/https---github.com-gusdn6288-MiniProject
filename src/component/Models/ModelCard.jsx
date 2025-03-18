@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ModelCardItem from "./ModelCardItem"; // ✅ ModelCardItem 가져오기
-import "./ModelCardItem.css";
+import style from "./ModelCardItem.module.css";
 
 const ModelCard = () => {
   const [models, setModels] = useState([]);
@@ -13,7 +13,7 @@ const ModelCard = () => {
   }, []);
 
   return (
-      <div className="Model-container">
+      <div className={style.ModelContainer}>
         {models.map((model) => (
           <ModelCardItem key={model.id} model={model} />
         ))}

@@ -1,4 +1,4 @@
-.model-card {
+.modelCard {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,33 +14,33 @@
     overflow: hidden;
 }
 
-.model-card:hover {
+.modelCard:hover {
     transform: scale(1.02);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.model-info {
+.modelInfo {
     flex: 1;
     padding-left: 20px;
     z-index: 2;
     text-align: left;
 }
 
-.model-info h3 {
+.modelInfo h3 {
     font-size: 0.9rem;
     font-weight: 500;
     color: #333;
     margin-bottom: 5px;
 }
 
-.model-info h2 {
+.modelInfo h2 {
     font-size: 1.8rem;
     font-weight: bold;
     color: black;
     margin: 0;
 }
 
-.model-image-container {
+.modelImageContainer {
     flex: 1;
     max-width: 500px;
     display: flex;
@@ -52,43 +52,42 @@
     bottom: 5px;
 }
 
-.model-image-container img {
+.modelImageModelImageContainer img {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
-.model-card:hover .model-image-container img {
+.modelCard:hover .modelModelImageContainer img {
     transform: scale(1.05); 
 }
 
 
-.Model-container {
+.ModelContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 150px;
     width: 90%; 
 }
 
 
 @media (max-width: 1200px) {
-    .car-container {
+    .carContainer {
         grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (max-width: 900px) {
-    .car-container {
+    .carContainer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
-    .car-container {
+    .carContainer {
         grid-template-columns: repeat(1, 1fr); 
     }
 }

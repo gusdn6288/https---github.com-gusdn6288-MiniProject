@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Productlist.css";
+import style from "./Productlist.module.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -14,18 +14,18 @@ const ProductList = () => {
       .catch((error) => console.error("상품 정보를 불러오는 중 오류 발생:", error));
   }, []);
 
-  const viewDetails = (prodcode) => {
-    navigate(`/productDetail/${prodcode}`);
+  const viewDetails = (id) => {
+    navigate(`/productDetail/${id}`);
   };
 
   return (
-    <div className="container mt-4">
+    <div className={style.cotainer}>
       {products.length === 0 ? (
-        <p className="no-products">등록된 상품이 없습니다.</p>
+        <p className={style.noProdcuts}>등록된 상품이 없습니다.</p>
       ) : (
-        <div className="car-container">
+        <div className={style.carContainer}>
           {products.map((product) => (
-            <ProductCard key={product.id || product.prodcode} product={product} viewDetails={viewDetails} />
+            <ProductCard key={product.id} product={product} viewDetails={viewDetails} />
           ))}
         </div>
       )}
@@ -35,14 +35,14 @@ const ProductList = () => {
 
 const ProductCard = ({ product, viewDetails }) => {
   return (
-    <div className="car-banner">
-      <div className="car-text">
-        <p className="car-model">{product.model}</p>
+    <div className={style.carBanner}>
+      <div className={style.carText}>
+        <p className={style.carModel}>{product.model}</p>
       </div>
-      <div className="car-image">
+      <div className={style.carImage}>
       <img src={`/img/Productimg/${product.model}.png`} alt={product.name} />
       </div>
-      <button className="btn-details" onClick={() => viewDetails(product.prodcode)}>
+      <button className={style.btnDetails} onClick={() => viewDetails(product.id)}>
         더 알아보기
       </button>
     </div>
