@@ -1,4 +1,4 @@
-.car-container {
+.carContainer {
   display: grid;
   grid-template-columns: repeat(2, minmax(600px, 1fr)); /* 2개씩 정렬, 최소 300px */
   gap: 60px;
@@ -10,7 +10,7 @@
   margin-left: 450px;
   margin-top: 0px;
 }
-.model-overview {
+.modelOverview {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;

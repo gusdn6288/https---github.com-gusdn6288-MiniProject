@@ -4,17 +4,18 @@ import App from "./App"; // App 컴포넌트를 올바르게 import
 import Product from "./pages/Products/Product"; // 
 import Login from "./pages/Login/Login"; // 
 import Signup from "./pages/Signup/Signup";
+import ProductDetail from "./pages/Detail/ProductDetail";
 
 function Routing() {
   return (
-<div className="contai"
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} /> {/* <Routes> 안에서 사용해야 함 */}
-        <Route path='/product' element={<Product />} /> {/* <Routes> 안에서 사용해야 함 */}
-        <Route path='/singup' element={<Signup />} /> {/* <Routes> 안에서 사용해야 함 */}
-        <Route path='/login' element={<Login />} /> {/* <Routes> 안에서 사용해야 함 */}
+        <Route path='/' element={<App />} />
+        <Route path='/product' element={<Product />} /> 
+        <Route path='/singup' element={<Signup />} /> 
+        <Route path='/login' element={<Login />} /> 
+        <Route path='/productDetail/:id' element={<ProductDetail />} /> 
       </Routes>
     </BrowserRouter>
 
